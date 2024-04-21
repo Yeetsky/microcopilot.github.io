@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoversPrime - Your Trusted Moving Partner</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Set background color (you can choose any color you like) */
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333; /* Dark background color */
+            color: #fff; /* White text color */
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* Button styles */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff6600; /* Orange button color */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #e65c00; /* Darker orange on hover */
+        }
+
+        /* Moving truck image */
+        .moving-truck {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+
+        /* Services section */
+        .services {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        li {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        /* FAQ section */
+        .faq {
+            padding: 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* JavaScript (for FAQ toggle) */
+        function toggleAnswer(event) {
+            const answer = event.target.nextElementSibling;
+            answer.classList.toggle('show');
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MoversPrime</h1>
+        <p>Your Trusted Moving Partner</p>
+        <a href="#services" class="btn">Services</a>
+    </header>
+
+    <img src="moving-truck.jpg" alt="Moving Truck" class="moving-truck">
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Local Residential Moves</li>
+            <li>Long-Distance Moves</li>
+            <li>Commercial Moves</li>
+            <li>Packing and Unpacking</li>
+            <li>Furniture Assembly</li>
+        </ul>
+    </section>
+
+    <section class="faq">
+        <h3>Frequently Asked Questions</h3>
+        <div class="question">
+            <p onclick="toggleAnswer(event)">How do I request a quote?</p>
+            <p class="answer">You can fill out our online form or call us directly for a free quote.</p>
+        </div>
+        <div class="question">
+            <p onclick="toggleAnswer(event)">Do you provide packing materials?</p>
+            <p class="answer">Yes, we offer packing supplies and can assist with packing services.</p>
+        </div>
+        <!-- Add more FAQ questions here -->
+    </section>
+
+    <script>
+        // JavaScript for FAQ toggle
+        const questions = document.querySelectorAll('.question p');
+        questions.forEach(question => {
+            question.addEventListener('click', toggleAnswer);
+        });
+
+        function toggleAnswer(event) {
+            const answer = event.target.nextElementSibling;
+            answer.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
